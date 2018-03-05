@@ -47,7 +47,10 @@ class Manager {
     if (Object.keys(this.anchors).length === 0) {
       this.addListeners()
     }
-    this.forceHashUpdate()
+    // Do not forceHashUpdate here because I don't want screen
+    // to jump whenever I add an anchor...
+    //
+    // Disabled: this.forceHashUpdate()
     this.anchors[id] = component
   }
 
